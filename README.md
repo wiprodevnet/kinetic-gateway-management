@@ -6,7 +6,7 @@ Sample gateway management sample code using kinetic APIs
 
 ## Description:
 1. Gateways will be claimed in a specific GMM instance, the location details (address with zipcode) must be available.
-2. Input to the script will be GMM instance,  organization ID & zipcode.
+2. Input to the script will be GMM instance,  organization ID.
 3. Gateways matching the requirements will be displayed in tabular format
 
 ## GMM Kinetic REST API:
