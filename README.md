@@ -10,9 +10,9 @@ GMM - Retrieve list of Gateways deployed in specific Organization - based on org
 3. Gateways matching the requirements will be displayed in tabular format
 
 ## Refer below link for more details:
-  https://developer.cisco.com/docs/kinetic/#!gmm-overview/gmm-overview
-  https://developer.cisco.com/docs/kinetic-api/
-  https://github.com/CiscoDevNet/iox-app-template
+  1. https://developer.cisco.com/docs/kinetic/#!gmm-overview/gmm-overview
+  2. https://developer.cisco.com/docs/kinetic-api/
+  3. https://github.com/CiscoDevNet/iox-app-template
   
 ## GMM Kinetic REST API:
 1. Generate a user token or API key to authenticate the API methods
@@ -31,6 +31,8 @@ requests
 3. Run the app(python3 kinetic.py)
 4. Enter host address and Email, Password
 
-## Result:
+## kinetic-gateway-management Output:
+![kinetic-gateway-management](https://github.com/wiprodevnet/kinetic-gateway-management/blob/master/images/kineticGMM.PNG)
+   
   
 
