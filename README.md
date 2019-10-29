@@ -22,8 +22,8 @@ GMM - Retrieve list of Gateways deployed in specific Organization - based on org
 5. Get the user organization Gatway details using GET v2/organizations/{organizationID}/gate_ways v2 API.
 
 ## Technologis:
-Python3
-requests
+1. Python3
+2. requests
 
 ## How to Get Started:
 1. Clone this repo
