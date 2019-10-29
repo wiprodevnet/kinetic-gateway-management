@@ -9,6 +9,11 @@ GMM - Retrieve list of Gateways deployed in specific Organization - based on org
 2. Input to the script will be GMM instance,  organization ID.
 3. Gateways matching the requirements will be displayed in tabular format
 
+## Refer below link for more details:
+  https://developer.cisco.com/docs/kinetic/#!gmm-overview/gmm-overview
+  https://developer.cisco.com/docs/kinetic-api/
+  https://github.com/CiscoDevNet/iox-app-template
+  
 ## GMM Kinetic REST API:
 1. Generate a user token or API key to authenticate the API methods
 2. Generate a user token for your Cisco Kinetic user account using the POST /v2/users/access_token v2 API.
@@ -27,4 +32,5 @@ requests
 4. Enter host address and Email, Password
 
 ## Result:
+  
 
