@@ -38,7 +38,7 @@ class CISCOKinetic:
                        "email":self.user}
             response = requests.post(url, headers=HEADERS, json=payload)
             login = response.json()["access_token"]
-            OBJ_KINETIC.org_id(login)
+            self.org_id(login)
         except Exception as error:
             print("Enter correct Host/Email/Password")
 
@@ -52,7 +52,7 @@ class CISCOKinetic:
             HEADERS["Authorization"] = token1
             response = requests.get(url, headers=HEADERS, verify=False)
             if isinstance(response.json(), list):
-                OBJ_KINETIC.gateway_list(response.json()[0]['id'], token)
+                self.gateway_list(response.json()[0]['id'], token)
             else:
                 print("Invalid API token, authentication failure.")
         except Exception as error:
