@@ -25,11 +25,11 @@ User id being used should have logged in to kinetic GMM and claimed a few gatewa
 
 ## How to Get Started:
    1. Clone this repo
-       - [x] $git clone https://github.com/wiprodevnet/kinetic-gateway-management.git
+       > git clone https://github.com/wiprodevnet/kinetic-gateway-management.git
    2. install all the necessary packages (best done inside of a virtual environment)
-       - [x] $pip3 install -r requirements.txt
+       > pip3 install -r requirements.txt
    3. Run the below python script in Python3 version
-       - [x] $python3 kinetic.py
+       > python3 kinetic.py
    4. Enter host address and Email, Password
 
 ## kinetic-gateway-management Output:
