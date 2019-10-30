@@ -37,12 +37,10 @@ class CISCOKinetic:
             payload = {"otp":"string", "password":self.password,
                        "email":self.user}
             response = requests.post(url, headers=HEADERS, json=payload)
-            login = ''
-            if response.json():
-                login = response.json()["access_token"]
+            login = response.json()["access_token"]
+            OBJ_KINETIC.org_id(login)
         except Exception as error:
-            print('Error: {}'.format(error.__str__()))
-        return login
+            print("Enter correct Host/Email/Password")
 
     def org_id(self, token):
         """
@@ -53,10 +51,12 @@ class CISCOKinetic:
             token1 = "Token " + token
             HEADERS["Authorization"] = token1
             response = requests.get(url, headers=HEADERS, verify=False)
-            data = response.json()
+            if isinstance(response.json(), list):
+                OBJ_KINETIC.gateway_list(response.json()[0]['id'], token)
+            else:
+                print("Invalid API token, authentication failure.")
         except Exception as error:
             print('Error: {}'.format(error.__str__()))
-        return data[0]['id']
 
     def gateway_list(self, orgid, token):
         """
@@ -79,6 +79,10 @@ class CISCOKinetic:
                      data['gate_ways'][each]['fog_director_state'],
                      data['gate_ways'][each]['sw_version'],
                      data['gate_ways'][each]['uptime']])
+            if len(data['gate_ways']):
+                print(KINETIC_GATEWAYS)
+            else:
+                print("Result not found")
         except Exception as error:
             print('Error: {}'.format(error.__str__()))
 
@@ -86,7 +90,4 @@ if __name__ == '__main__':
     OBJ_KINETIC = CISCOKinetic(input('Host:'),
                                input('Email:'),
                                getpass.getpass('Password:'))
-    LOGIN = OBJ_KINETIC.kinetic_login()
-    ORGID = OBJ_KINETIC.org_id(LOGIN)
-    OBJ_KINETIC.gateway_list(ORGID, LOGIN)
-    print(KINETIC_GATEWAYS)
+    OBJ_KINETIC.kinetic_login()
